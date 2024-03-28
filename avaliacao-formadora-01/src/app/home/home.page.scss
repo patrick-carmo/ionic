@@ -1,0 +1,47 @@
+a {
+  text-decoration: none;
+}
+
+ion-card-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+ion-card-subtitle{
+  text-align: center;
+  font-size: 1rem;
+}
+
+.list ion-label {
+  padding: 10px 0px;
+}
+
+.margin, ion-item{
+  margin: 10px 0px
+}
+
+#picture {
+  align-self: center;
+  border-radius: 40px;
+  padding: 20px;
+  max-height: 400px;
+}
+
+.flex-column, .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.flex-column p {
+  font-size: 0.8rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
