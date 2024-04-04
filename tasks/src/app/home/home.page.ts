@@ -134,10 +134,10 @@ export class HomePage {
     await alert.present();
   }
 
-  async presentPopover(ev: any) {
+  async presentPopover(event: any) {
     const popover = await this.popoverController.create({
       component: PopoverComponent,
-      event: ev,
+      event,
       translucent: true,
     });
 

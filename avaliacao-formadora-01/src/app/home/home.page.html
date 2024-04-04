@@ -7,132 +7,134 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Patrick do Carmo</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="container">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Patrick do Carmo</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <ion-card class="flex-column">
-    <img src="../../assets/foto-perfil.jpg" alt="" id="picture">
-    <ion-card-header>
-      <ion-card-title>Patrick do Carmo</ion-card-title>
-      <ion-card-subtitle>
-        Desenvolvedor Back-End
-      </ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <div class="flex-column">
-        <p>Matrícula: 22107342</p>
-        <p>Turma: ADS0301N</p>
-      </div>
-      <ion-button fill="outline" shape="round" size="small">
-        <a href="https://patrick-carmo.tech/" target="_blank">Portifólio</a>
-      </ion-button>
-    </ion-card-content>
-  </ion-card>
+    <ion-card class="flex-column">
+      <img src="../../assets/foto-perfil.jpg" alt="" id="picture">
+      <ion-card-header>
+        <ion-card-title>Patrick do Carmo</ion-card-title>
+        <ion-card-subtitle>
+          Desenvolvedor Back-End
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="flex-column">
+          <p>Matrícula: 22107342</p>
+          <p>Turma: ADS0301N</p>
+        </div>
+        <ion-button fill="outline" shape="round" size="small" href="https://patrick-carmo.tech/" target="_blank">
+          Portifólio
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        Contato
-      </ion-card-title>
-    </ion-card-header>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Contato
+        </ion-card-title>
+      </ion-card-header>
 
-    <ion-card-content class="flex">
-      <ion-button fill="outline" shape="round" size="small">
-        <a href="https://github.com/patrick-carmo" target="_blank">GitHub</a>
-      </ion-button>
-      <ion-button fill="outline" shape="round" size="small">
-        <a href="https://www.linkedin.com/in/patrick-carmo/" target="_blank">LinkedIn</a>
-      </ion-button>
-    </ion-card-content>
-  </ion-card>
+      <ion-card-content class="flex">
+        <ion-button fill="outline" shape="round" size="small" href="https://github.com/patrick-carmo" target="_blank">
+          GitHub
+        </ion-button>
+        <ion-button fill="outline" shape="round" size="small" href="https://www.linkedin.com/in/patrick-carmo/" target="_blank">
+          LinkedIn
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Projetos</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <div class="list">
-            <ion-label>Marriage - Em Produção</ion-label>
-            <ion-note color="medium">
-              Sistema com autenticação Google Auth e envio de vídeos para o serviço Google Drive.
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Projetos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <div class="list">
+              <ion-label>Marriage - Em Produção</ion-label>
+              <ion-note color="medium">
+                Sistema com autenticação Google Auth e envio de vídeos para o serviço Google Drive.
 
-              <div class="margin">
-                O objetivo do sistema é formar lembranças para um casamento, onde os convidados poderão gravar um vídeo através do próprio site e enviar como mensagem para o casal assistir posteriormente.
-              </div>
+                <div class="margin">
+                  O objetivo do sistema é formar lembranças para um casamento, onde os convidados poderão gravar um vídeo através do próprio site e enviar como mensagem para o casal assistir posteriormente.
+                </div>
 
-              <div class="margin">
-                Contém autenticação através do Google Auth com as sessões armazenadas em cache no Redis. Além das informações do usuário cadastradas em um banco de dados para fazer o relacionamento entre os vídeos enviados e o usuário para a criação de uma página onde o casal poderá assistir os vídeos através do próprio site.
-              </div>
-            </ion-note>
-            <ion-button fill="outline" shape="round" href="https://marriage-iv13.onrender.com" target="_blank">Site (40sg para abrir)</ion-button>
-          </div>
-        </ion-item>
-
-        <ion-item>
-          <div class="list">
-            <ion-label>Sistema PDV</ion-label>
-            <ion-note color="medium">
-              API de sistema de ponto de vendas onde contém um sistema de cadastro de usuários, produtos, clientes e pedidos.
-
-              <div class="margin">
-                Foi desenvolvido através de 3 sprints com um grupo de 5 pessoas. Após a finalização do projeto eu resolvi refatorar, substituindo por Typescript para aprendizado.
-              </div>
-
-              <div class="margin">
-                Possui um sistema de autenticação através de token JWT, validações do query, params, body com joi, sistema de envio de e-mails para os pedidos realizados e armazenamento de imagens na nuvem para os produtos cadastrados.
-              </div>
-              <div class="margin"></div>
-            </ion-note>
-            <div class="flex">
-              <ion-button fill="outline" shape="round" size="small" href="https://patrick-sistema-pdv.vercel.app/api-docs/" target="_blank">
-                Documentação
-              </ion-button>
-
-              <ion-button fill="outline" shape="round" size="small" href="https://github.com/patrick-carmo/sistema-pdv" target="_blank">
-                Repositório
-              </ion-button>
+                <div class="margin">
+                  Contém autenticação através do Google Auth com as sessões armazenadas em cache no Redis. Além das informações do usuário cadastradas em um banco de dados para fazer o relacionamento entre os vídeos enviados e o usuário para a criação de uma página onde o casal poderá assistir os vídeos através do próprio site.
+                </div>
+              </ion-note>
+              <ion-button fill="outline" shape="round" href="https://marriage-iv13.onrender.com" target="_blank">Site (40sg para abrir)</ion-button>
             </div>
-          </div>
-        </ion-item>
+          </ion-item>
 
-        <ion-item>
-          <div class="list">
-            <ion-label>Telecall</ion-label>
+          <ion-item>
+            <div class="list">
+              <ion-label>Sistema PDV</ion-label>
+              <ion-note color="medium">
+                API de sistema de ponto de vendas onde contém um sistema de cadastro de usuários, produtos, clientes e pedidos.
 
-            <ion-note color="medium">
-              Projeto Full Stack com sistema de cadastro e controle de acesso.
-              <div class="margin">
-                Front-End responsivo com modo noturno. Back-End com autenticação de usuário e criptografia de senha, além da utilização do JWT como middleware para o controle de acesso.
+                <div class="margin">
+                  Foi desenvolvido através de 3 sprints com um grupo de 5 pessoas. Após a finalização do projeto eu resolvi refatorar, substituindo por Typescript para aprendizado.
+                </div>
+
+                <div class="margin">
+                  Possui um sistema de autenticação através de token JWT, validações do query, params, body com joi, sistema de envio de e-mails para os pedidos realizados e armazenamento de imagens na nuvem para os produtos cadastrados.
+                </div>
+                <div class="margin"></div>
+              </ion-note>
+              <div class="flex">
+                <ion-button fill="outline" shape="round" size="small" href="https://patrick-sistema-pdv.vercel.app/api-docs/" target="_blank">
+                  Documentação
+                </ion-button>
+
+                <ion-button fill="outline" shape="round" size="small" href="https://github.com/patrick-carmo/sistema-pdv" target="_blank">
+                  Repositório
+                </ion-button>
               </div>
-            </ion-note>
-            <ion-button fill="outline" shape="round" size="small" href="https://telecall.vercel.app/" target="_blank">Site</ion-button>
+            </div>
+          </ion-item>
 
-          </div>
-        </ion-item>
+          <ion-item>
+            <div class="list">
+              <ion-label>Telecall</ion-label>
 
-        <ion-item>
-          <div class="list">
-            <ion-label>RESTful API - Sistema Dindin</ion-label>
-            <ion-note color="medium">
-              <p>API de um sistema de gerenciamento monetário com detalhes sobre gastos.</p>
+              <ion-note color="medium">
+                Projeto Full Stack com sistema de cadastro e controle de acesso.
+                <div class="margin">
+                  Front-End responsivo com modo noturno. Back-End com autenticação de usuário e criptografia de senha, além da utilização do JWT como middleware para o controle de acesso.
+                </div>
+              </ion-note>
+              <ion-button fill="outline" shape="round" size="small" href="https://telecall.vercel.app/" target="_blank">Site</ion-button>
 
-              <div class="margin">
-                Projeto realizado em dupla (pair programming), onde o objetivo foi a construção de uma API RESTful com diversos endpoints que realizam anotações de transações e os detalhes do mesmo.
-              </div>
+            </div>
+          </ion-item>
 
-              <div class="margin">
-                As principais atividades foram a criação de rotas, validação de dados, criação de middlewares e conexão com banco de dados.
-              </div>
-            </ion-note>
-            <ion-button fill="outline" shape="round" href="https://github.com/patrick-carmo/restful-api-sistema-dindin" target="_blank">Repositório</ion-button>
-          </div>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+          <ion-item>
+            <div class="list">
+              <ion-label>RESTful API - Sistema Dindin</ion-label>
+              <ion-note color="medium">
+                <p>API de um sistema de gerenciamento monetário com detalhes sobre gastos.</p>
+
+                <div class="margin">
+                  Projeto realizado em dupla (pair programming), onde o objetivo foi a construção de uma API RESTful com diversos endpoints que realizam anotações de transações e os detalhes do mesmo.
+                </div>
+
+                <div class="margin">
+                  As principais atividades foram a criação de rotas, validação de dados, criação de middlewares e conexão com banco de dados.
+                </div>
+              </ion-note>
+              <ion-button fill="outline" shape="round" href="https://github.com/patrick-carmo/restful-api-sistema-dindin" target="_blank">Repositório</ion-button>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
