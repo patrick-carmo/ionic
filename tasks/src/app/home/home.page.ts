@@ -6,6 +6,7 @@ import {
 } from '@ionic/angular';
 import { TaskService } from '../services/task.service';
 import { PopoverComponent } from '../popover/popover.component';
+import { format } from 'date-fns';
 
 @Component({
   selector: 'app-home',
@@ -105,7 +106,7 @@ export class HomePage {
           placeholder: 'Data',
           min: '2020-01-01',
           max: '2026-12-31',
-          value: task.date.toISOString().substring(0, 10),
+          value: format(task.date, 'yyyy-MM-dd'),
         },
       ],
       buttons: [
@@ -126,7 +127,7 @@ export class HomePage {
             }
 
             this.presentToast();
-            this.taskService.updateTask(index, alertData.task, alertData.date);
+            this.presentAlertPromptAdd();
           },
         },
       ],
@@ -142,5 +143,9 @@ export class HomePage {
     });
 
     return await popover.present();
+  }
+
+  ngOnInit() {
+    this.taskService.getFromStorage();
   }
 }

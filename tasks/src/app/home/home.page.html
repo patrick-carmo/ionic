@@ -29,9 +29,9 @@
       <ion-item-sliding *ngFor="let task of taskService.getTasks(); let i = index">
         <ion-item *ngIf="!task.done">
           <ion-label>{{task.value}}</ion-label>
-          <ion-checkbox slot="start" [(ngModel)]="task.done"></ion-checkbox>
+          <ion-checkbox slot="start" [(ngModel)]="task.done" (ionChange)="taskService.setToStorage()"></ion-checkbox>
           <ion-badge color="warning" *ngIf="task.date.getDate()">
-            {{task.date.getDate() + 1 + '/' + (task.date.getMonth() + 1) + '/' + task.date.getFullYear()}}
+            {{task.date.getDate() + '/' + (task.date.getMonth() + 1) + '/' + task.date.getFullYear()}}
           </ion-badge>
         </ion-item>
         <ion-item-options side="end">
@@ -50,9 +50,9 @@
       <ion-item-sliding *ngFor="let task of taskService.getTasks(); let i = index">
         <ion-item *ngIf="task.done">
           <ion-label>{{task.value}}</ion-label>
-          <ion-checkbox slot="start" [(ngModel)]="task.done"></ion-checkbox>
+          <ion-checkbox slot="start" [(ngModel)]="task.done" (ionChange)="taskService.setToStorage()"></ion-checkbox>
           <ion-badge color="warning" *ngIf="task.date.getDate()">
-            {{task.date.getDate() + 1 + '/' + (task.date.getMonth() + 1) + '/' + task.date.getFullYear()}}
+            {{task.date.getDate() + '/' + (task.date.getMonth() + 1) + '/' + task.date.getFullYear()}}
           </ion-badge>
         </ion-item>
         <ion-item-options side="end">
