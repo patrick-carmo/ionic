@@ -106,7 +106,10 @@ export class HomePage {
           placeholder: 'Data',
           min: '2020-01-01',
           max: '2026-12-31',
-          value: format(task.date, 'yyyy-MM-dd'),
+          value:
+            task.date instanceof Date && !isNaN(task.date)
+              ? format(task.date, 'yyyy-MM-dd')
+              : '',
         },
       ],
       buttons: [

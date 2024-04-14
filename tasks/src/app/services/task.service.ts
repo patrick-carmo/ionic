@@ -46,11 +46,7 @@ export class TaskService {
     let tempoTasks = value ? JSON.parse(value) : '';
     if (tempoTasks) {
       for (let temp of tempoTasks) {
-        if (temp.date) {
-          temp.date = format(new Date(temp.date), 'yyyy/MM/dd');
-        } else {
-          temp.date = '';
-        }
+        temp.date = temp.date ? format(new Date(temp.date), 'yyyy-MM-dd') : '';
         let task = {
           value: temp.value,
           date: new Date(temp.date),
