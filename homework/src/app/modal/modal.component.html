@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comments</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let comment of comments">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{comment.name}}</ion-card-title>
+          <ion-card-subtitle>{{comment.email}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{comment.body}}</ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="dismiss()" [strong]="true" shape="round" expand="full">Close</ion-button>
+</ion-content>
