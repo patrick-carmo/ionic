@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Minha Lista de Pessoas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="setPerson()">
+    <ion-item>
+      <ion-input labelPlacement="floating" label="Nome" name="name" type="text" [(ngModel)]="newPerson.name" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input labelPlacement="floating" label="Idade" type="number" name="age" [(ngModel)]="newPerson.age" formControlName="age"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Foto</ion-label>
+      <input id="fileInput" type="file" accept="image/*" name="age" (change)="onFileSelected($event)" formControlName="image">
+      <ion-thumbnail slot="end" *ngIf="newPerson.image">
+        <img [src]="newPerson.image">
+      </ion-thumbnail>
+    </ion-item>
+
+    <div class="flex">
+      <ion-button type="submit">
+        {{ isEditing ? 'Salvar Edição' : 'Adicionar Pessoa' }}
+      </ion-button>
+
+      <ion-button (click)="resetForm()" color="medium">Cancelar</ion-button>
+    </div>
+  </form>
+
+
+  <ion-list lines="full">
+    <ion-item *ngFor="let person of people; index as index" (click)="startEdit(person, index)">
+      <ion-thumbnail slot="start" *ngIf="person.image">
+        <img [src]="person.image">
+      </ion-thumbnail>
+      <ion-label>{{ person.name }} - {{ person.age }}</ion-label>
+      <ion-icon slot="end" name="trash" (click)="confirmDeletePerson(person, index)"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
